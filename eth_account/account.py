@@ -650,7 +650,7 @@ class Account(object):
             r,
             s,
             rlp_encoded,
-        ) = sign_transaction_dict(private_key, transaction_dict)
+        ) = sign_transaction_dict(self._parsePrivateKey(private_key), transaction_dict)
 
         transaction_hash = keccak(rlp_encoded)
 
